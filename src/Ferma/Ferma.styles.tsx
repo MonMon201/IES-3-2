@@ -7,21 +7,23 @@ export const StyledFerma = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 500px;
+  height: 200px;
   color: ${colors.white10};
 `;
 
 export const StyledTextField = styled(TextField)`
   border-radius: 5px;
   background: ${colors.white10};
-  input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
 `;
 
 export const StyledButton = styled(Button)`
   width: 200px;
   &:hover {
   }
+`;
+
+export const StyledOutput = styled.div`
+  width: 200px;
+  height: 20px;
+  color: ${colors.white10};
 `;
