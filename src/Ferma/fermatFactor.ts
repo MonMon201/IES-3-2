@@ -1,21 +1,20 @@
-export const fermaFactor = (n: number): { factors: number[] } => {
-  let foundIn = 1;
+export const fermaFactor = (n: number): number[] => {
   if (n <= 0) {
-    return { factors: [n] };
+    return [n];
   }
 
   if (!(n % 2)) {
-    return { factors: [n / 2, 2] };
+    return [n / 2, 2];
   }
 
   let a = Math.ceil(Math.sqrt(n));
 
   if (a * a === n) {
-    return { factors: [a, a] };
+    return [a, a];
   }
 
   let b = 0;
-  for (; foundIn > 0; foundIn++) {
+  while (1) {
     const c = a * a - n;
     b = Math.floor(Math.sqrt(c));
 
@@ -23,5 +22,5 @@ export const fermaFactor = (n: number): { factors: number[] } => {
     else a += 1;
   }
 
-  return { factors: [a - b, a + b] };
+  return [a - b, a + b];
 };

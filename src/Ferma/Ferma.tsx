@@ -18,8 +18,7 @@ export const Ferma = () => {
   const compute = () => {
     const number = parseInt(input);
     if (!isNaN(number) && number) {
-      const { factors } = fermaFactor(number);
-      setOutput(factors);
+      setOutput(fermaFactor(number));
     }
   };
   return (
