@@ -1,5 +1,5 @@
 import React from "react";
-import { Ferma } from "./Ferma/Ferma";
+import { Perceptron } from "./Perceptron/Perceptron";
 import { GlobalStyles } from "./global.styles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { routes } from "./constants";
@@ -11,8 +11,7 @@ export const App = () => {
       <GlobalStyles />
       <StyledAppContainer>
         <Switch>
-          <Route exact path={routes.base} component={Ferma} />
-          {/* <Route exact path={} component={} /> */}
+          <Route exact path={routes.base} component={ Perceptron } />
         </Switch>
       </StyledAppContainer>
     </Router>
